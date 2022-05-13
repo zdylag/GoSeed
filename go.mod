@@ -1,4 +1,4 @@
-module github.com/golang-templates/seed
+module github.com/zdylag/GoSeed
 
 go 1.18
 
