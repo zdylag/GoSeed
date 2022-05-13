@@ -4,9 +4,14 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(greet())
+	fmt.Println(NeedsAComment())
 }
 
-func greet() string {
+func NeedsAComment() string {
+	return "Hi!"
+}
+
+// This isnt good enough.
+func NeedsABetterComment() string {
 	return "Hi!"
 }

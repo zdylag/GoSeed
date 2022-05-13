@@ -7,7 +7,7 @@ import (
 )
 
 func Test_greet(t *testing.T) {
-	got := greet()
+	got := NeedsAComment()
 
 	assert.Equal(t, "Hi!", got, "should properly greet")
 }
