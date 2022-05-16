@@ -1,0 +1,44 @@
+name: 'Commit Message Check'
+
+on:
+  push: 
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  check-commit-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Commit Area Valid
+        uses: gsactions/commit-message-checker@v1
+        with:
+          pattern: '^((\w+ [\w\*]+)|(\w+)): .+'
+          flags: ''
+          excludeTitle: 'true'
+          excludeDescription: 'true'
+          checkAllCommitMessages: 'true'
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          error: 'Commit titles should be prefixed by the primary area impacted. An example might be `go webutil: add http3 support`.'
+
+      - name: Check Line Length
+        uses: gsactions/commit-message-checker@v1
+        with:
+          pattern: '^.{0,72}$'
+          excludeTitle: 'true'
+          excludeDescription: 'true'
+          checkAllCommitMessages: 'true'
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          error: 'No line in the commit message should exceed 72 characters.'
+
+      - name: Commit Has Message
+        uses: gsactions/commit-message-checker@v1
+        with:
+          pattern: '^.*\n\n.+$'
+          flags: 's'
+          excludeTitle: 'true'
+          excludeDescription: 'true'
+          checkAllCommitMessages: 'true'
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          error: 'Every commit should have a title followed by a blank line, and then a detailed message.'
