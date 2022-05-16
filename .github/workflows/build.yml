@@ -52,6 +52,7 @@ jobs:
       fail-fast: true
       matrix:
         os: [ ubuntu-20.04, macos-10.15, windows-2019 ]
+        go_version: [ 1.16, 1.17, 1.18 ]
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -60,7 +61,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
         with:
-          go-version: ${{ env.default_go_version }}
+          go-version: ${{ matrix.go_version }}
 
       - name: Test
         run: make test
