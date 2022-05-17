@@ -1,6 +1,6 @@
 # Go Repository Template
 
-[![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
+[![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-success)](CHANGELOG.md)
 [![GitHub Release](https://img.shields.io/github/v/release/zdylag/GoSeed)](https://github.com/zdylag/GoSeed/releases)
 [![Go Reference](https://pkg.go.dev/badge/github.com/zdylag/GoSeed.svg)](https://pkg.go.dev/github.com/zdylag/GoSeed)
 [![go.mod](https://img.shields.io/github/go-mod/go-version/zdylag/GoSeed)](go.mod)
