@@ -9,7 +9,46 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/zdylag/GoSeed)](https://goreportcard.com/report/github.com/zdylag/GoSeed)
 [![Codecov](https://codecov.io/gh/zdylag/GoSeed/branch/main/graph/badge.svg)](https://codecov.io/gh/zdylag/GoSeed)
 
-Example use of the go test repository!
+## TEMPLATE INFORMATION
+
+### What is this?
+This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
+
+- quickly get into Go without losing too much time on environment setup,
+- create a new repoisitory with basic Continous Integration.
+
+It includes:
+
+- continous integration via [GitHub Actions](https://github.com/features/actions),
+- build automation via [Make](https://www.gnu.org/software/make),
+- dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
+- code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
+- linting with [golangci-lint](https://github.com/golangci/golangci-lint),
+- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector), code covarage [HTML report](https://blog.golang.org/cover) and [Codecov report](https://codecov.io/),
+- releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
+- dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
+- security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
+- [Visual Studio Code](https://code.visualstudio.com) configuration with [Go](https://code.visualstudio.com/docs/languages/go) and [Remote Container](https://code.visualstudio.com/docs/remote/containers) support.
+
+`Star` this repository if you find it valuable and worth maintaining.
+
+`Watch` this repository to get notified about new releases, issues, etc.
+
+### How do I use it?
+
+1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
+1. Click the `Use this template` button (alt. clone or download this repository).
+1. Run `make rename
+1. Replace all occurences of `zdylag/GoSeed` to `your_org/repo_name` in all files.
+1. Delete the following files:
+   - [DELETETHIS.go](DELETETHIS.go)
+   - [DELETETHIS_test.go](DELETETHIS_test.go)
+1. Update the following files:
+   - [CHANGELOG.md](CHANGELOG.md)
+   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+   - [CONTRIBUTING.md](CODE_OF_CONDUCT.md)
+   - [LICENSE](LICENSE)
+   - [README.md](README.md)
 
 ## Setup
 
