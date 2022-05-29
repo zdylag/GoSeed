@@ -39,17 +39,51 @@ It includes:
 
 1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
-1. Run `make rename
-1. Replace all occurences of `zdylag/GoSeed` to `your_org/repo_name` in all files.
-1. Delete the following files:
-   - [DELETETHIS.go](DELETETHIS.go)
-   - [DELETETHIS_test.go](DELETETHIS_test.go)
-1. Update the following files:
-   - [CHANGELOG.md](CHANGELOG.md)
-   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-   - [CONTRIBUTING.md](CODE_OF_CONDUCT.md)
-   - [LICENSE](LICENSE)
-   - [README.md](README.md)
+1. In GitHub
+   1. Enable `Issues`
+   1. Disable `Allow merge commits` and `Allow squash merging`
+   1. Enable `Always suggest updating pull request branches`
+   1. Enable `Automatically delete head branches`
+   1. Enable Tags protection on `*`
+   1. Set up the following branch protection rules on `main`:
+      - Require a pull request before merging
+      - Require approvals
+      - Require review from Code Owners
+      - Require status checks to pass before merging
+      - Require branches to be up to date before merging
+      - Status checks that are required
+         - Analyze (go)
+         - check-commit-message
+         - ci (ubuntu-20.04)
+         - codecov/patch
+         - codecov/project
+         - CodeQL
+         - release-test
+         - test (macos-10.15, 1.16)
+         - test (macos-10.15, 1.17)
+         - test (macos-10.15, 1.18)
+         - test (ubuntu-20.04, 1.16)
+         - test (ubuntu-20.04, 1.17)
+         - test (ubuntu-20.04, 1.18)
+         - test (windows-2019, 1.16)
+         - test (windows-2019, 1.17)
+         - test (windows-2019, 1.18)
+      - Require linear history
+   1. Allow all actions and reusable workflows
+   1. Require approval for first-time contributors to Fork pull request workflows from outside collaborators
+1. In the repository:
+   1. Run `make rename`
+   1. Replace all occurences of `zdylag/GoSeed` to `your_org/repo_name` in all files.
+   1. Delete the following files:
+      - [DELETETHIS.go](DELETETHIS.go)
+      - [DELETETHIS_test.go](DELETETHIS_test.go)
+   1. Update the following files:
+      - [CHANGELOG.md](CHANGELOG.md)
+      - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+      - [CONTRIBUTING.md](CODE_OF_CONDUCT.md)
+      - [LICENSE](LICENSE)
+      - [README.md](README.md)
+   1. Make a pull request to start your new repo off right!
 
 ## Setup
 
