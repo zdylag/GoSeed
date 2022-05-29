@@ -12,6 +12,7 @@
 ## TEMPLATE INFORMATION
 
 ### What is this?
+
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
@@ -93,7 +94,6 @@ The Development Container configuration mixes [Docker in Docker](https://github.
 The release workflow is triggered each time a tag with `v` prefix is pushed.
 
 _CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
-
 
 ### How to automate generating git tags for next release version
 
