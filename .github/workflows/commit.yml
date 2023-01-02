@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Commit Area Valid
-        uses: gsactions/commit-message-checker@v1
+        uses: gsactions/commit-message-checker@v2
         with:
           pattern: '^((\w+ [\w\*]+)|(\w+)): .+'
           flags: ''
@@ -23,7 +23,7 @@ jobs:
           error: 'Commit titles should be prefixed by the primary area impacted. An example might be `go webutil: add http3 support`.'
 
       - name: Check Line Length
-        uses: gsactions/commit-message-checker@v1
+        uses: gsactions/commit-message-checker@v2
         with:
           pattern: '^.{0,72}$'
           excludeTitle: 'true'
@@ -33,7 +33,7 @@ jobs:
           error: 'No line in the commit message should exceed 72 characters.'
 
       - name: Commit Has Message
-        uses: gsactions/commit-message-checker@v1
+        uses: gsactions/commit-message-checker@v2
         with:
           pattern: '^.*\n\n.+$'
           flags: 's'
